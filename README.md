@@ -23,6 +23,9 @@ Occam's-razor-thinking is strongly preferred for this project. The overarching g
 
 - Only public videos are downloaded. Downloading unlisted and private videos would require using the YouTube API (if that is supported) which would depend on an API key with limits, which would then have to be kept track of, which would require authentication, and updates if the API changes, and OAuth, and versioning, which...
 - Not possible to backup half of a channel or half of a playlist. Everything is backed up. A simple deny list of not allowed YouTube ids could be created but simpler is better than more complex.
+- Age-restricted videos require a cookies file of a YouTuber who is of sufficient age to watch age-restricted videos. Otherwise, they are not downloaded.
+- Videos that have the error "This video is unavailable on this device." are not downloaded. I don't know why some videos show that when played in the web browser.
+- If a video is in the process of encoding, it might be downloaded at a lower resolution than its maximum resolution. I have not tested this.
 
 ## Credits
 
