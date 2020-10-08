@@ -1,0 +1,11 @@
+version: "3"
+services:
+  youtube-channel-downloader:
+    privileged: true
+    build: .
+    environment:
+      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      CHANNEL_NAME: ${CHANNEL_NAME}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      S3_ENDPOINT_URL: ${S3_ENDPOINT_URL}
