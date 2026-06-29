@@ -1,10 +1,10 @@
-FROM ubuntu:18.04
+FROM ubuntu:26.04
 
 ## Some utilities
 RUN apt-get update -y && \
-    apt-get install -y build-essential libfuse-dev libcurl4-openssl-dev libxml2-dev pkg-config libssl-dev mime-support automake libtool wget tar git unzip
-RUN apt-get install lsb-release -y  && apt-get install zip vim python curl attr ffmpeg atomicparsley dos2unix -y
-RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+    apt-get install -y build-essential libfuse3-dev libcurl4-openssl-dev libxml2-dev pkg-config libssl-dev media-types automake libtool wget tar git unzip
+RUN apt-get install lsb-release -y  && apt-get install zip vim python-is-python3 curl attr ffmpeg atomicparsley dos2unix -y
+RUN curl -L https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl -o /usr/local/bin/youtube-dl
 RUN chmod a+rx /usr/local/bin/youtube-dl
 
 ## Install S3 Fuse
